@@ -1,0 +1,20 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bank-payment-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bank-payment-api
+  template:
+    metadata:
+      labels:
+        app: bank-payment-api
+    spec:
+      containers:
+      - name: bank-payment-api
+        image: <your-dockerhub-username>/bank-payment-api:latest
+        ports:
+        - containerPort: 8080
