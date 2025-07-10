@@ -11,7 +11,7 @@ public class PaymentController {
     private double balance = 1000.0;
     private List<String> transactions = new ArrayList<>();
 
-    @PostMapping("/pay")
+    @GetMapping("/pay")
     public String pay(@RequestParam("amount") double amount) {
         if (amount > balance) {
             return "Insufficient balance.";
