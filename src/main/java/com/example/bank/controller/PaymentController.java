@@ -12,7 +12,7 @@ public class PaymentController {
     private List<String> transactions = new ArrayList<>();
 
     @PostMapping("/pay")
-    public String pay(@RequestParam double amount) {
+    public String pay(@RequestParam("amount") double amount) {
         if (amount > balance) {
             return "Insufficient balance.";
         }
