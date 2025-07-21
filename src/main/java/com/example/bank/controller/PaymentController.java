@@ -13,7 +13,7 @@ public class PaymentController {
     private List<String> transactions = new ArrayList<>();
 
     @GetMapping("/")
-    public String hello() {
+    public String hellopay() {
         return "Hello, payment API is up!";
     }
     
