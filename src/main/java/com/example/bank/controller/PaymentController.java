@@ -6,11 +6,17 @@ import java.util.*;
 
 @RestController
 @RequestMapping("/api")
+    
 public class PaymentController {
 
     private double balance = 1000.0;
     private List<String> transactions = new ArrayList<>();
 
+    @GetMapping("/")
+    public String hello() {
+        return "Hello, payment API is up!";
+    }
+    
     @GetMapping("/pay")
     public String pay(@RequestParam("amount") double amount) {
         if (amount > balance) {
