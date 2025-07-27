@@ -16,6 +16,17 @@
     </parent>
          
     <dependencies>
+         <dependency>
+           <!-- Spring Boot Actuator -->
+           <groupId>org.springframework.boot</groupId>
+           <artifactId>spring-boot-starter-actuator</artifactId>      
+         </dependency>
+
+         <dependency>
+           <!-- Micrometer Promethrus Registry -->
+           <groupId>micrometer.io</groupId>
+           <artifactId>micrometer-registry-prometheus</artifactId>         
+         </dependency>
              
         <dependency>
             <groupId>org.springframework.boot</groupId>
